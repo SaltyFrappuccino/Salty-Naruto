@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:blaze_powder"
+    },
+    "title": {
+      "translate": "advancements.sn_fire_release.title"
+    },
+    "description": {
+      "translate": "advancements.sn_fire_release.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "sn_fire_release_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "salty_naruto:sn_start"
+}

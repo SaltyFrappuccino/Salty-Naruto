@@ -1,0 +1,12 @@
+{
+  "_fv": 77,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "G",
+    "keyBindingName": "Switch Jutsu",
+    "keyBindingCategoryKey": "salty_naruto",
+    "onKeyPressed": {
+      "name": "SwitchJutsuKeyPressed"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "_fv": 77,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "Z",
+    "keyBindingName": "Start Jutsu",
+    "keyBindingCategoryKey": "salty_naruto",
+    "onKeyPressed": {
+      "name": "StartJutsuCharge"
+    },
+    "onKeyReleased": {
+      "name": "StopJutsuCharge"
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "_fv": 77,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 250,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_player_level",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPlayerLevel"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 95,
+          "y": 44,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_player_experience",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPlayerExperience"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 94,
+          "y": 57,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_level_points",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnLevelPoints"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 94,
+          "y": 73,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_jutsu_points",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnJutsuPoints"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 94,
+          "y": 86,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_ninjutus_level",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnNinjutusLevel"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 94,
+          "y": 103,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_taijutsu_level",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnTaijutsuLevel"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 94,
+          "y": 128,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_genjutsu_level",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnGenjutsuLevel"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 94,
+          "y": 154,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty",
+          "text": "+",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "NinjaGUILevelUpNinjutsu"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 202,
+          "y": 98,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty1",
+          "text": "+",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "NinjaGUILevelUpTaijutsu"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 202,
+          "y": 123,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty2",
+          "text": "+",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "NinjaGUILevelUpGenjutsu"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 202,
+          "y": 149,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_player_clan",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPlayerClan"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 94,
+          "y": 175,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

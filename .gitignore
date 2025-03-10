@@ -1,0 +1,122 @@
+# MCreator/Minecraft Mod .gitignore
+
+# WORK
+/WORK/
+
+# Gradle
+.gradle/
+build/
+out/
+classes/
+reobfJar/
+.gradle
+**/build/
+!src/**/build/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+.gradletasknamecache
+
+# MCreator-specific
+.mcreator/
+*.mcreator
+.mcreator/gradle.mcreator
+.launch/
+
+# IDE files (in case they get generated)
+.idea/
+*.iml
+*.ipr
+*.iws
+*.idea
+.classpath
+.project
+.settings/
+bin/
+.vscode/
+.metals/
+.bloop/
+
+# Eclipse
+*.launch
+
+# Minecraft run directory
+run/
+/run/
+run/*
+!run/mods/
+run/mods/*
+!run/mods/*.jar
+eclipse/
+debug/
+
+# Compiled class file
+*.class
+
+# Log files
+*.log
+logs/
+*/logs/
+run/logs/
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+
+# Minecraft crash reports
+crash-reports/
+run/crash-reports/
+
+# Screenshots (usually not version controlled)
+screenshots/
+run/screenshots/
+
+# Saved worlds (usually not version controlled)
+saves/
+run/saves/
+
+# Configuration that shouldn't be version controlled
+options.txt
+usercache.json
+usernamecache.json
+run/options.txt
+run/usercache.json
+run/usernamecache.json
+
+# Server data
+server.properties
+run/server.properties
+
+# OS-specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Debug VM arguments
+debug_args.txt
+
+# Virtual machine crash logs
+hs_err_pid*
+replay_pid* 
