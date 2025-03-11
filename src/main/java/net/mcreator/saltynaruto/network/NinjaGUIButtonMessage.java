@@ -13,7 +13,10 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.saltynaruto.world.inventory.NinjaGUIMenu;
 import net.mcreator.saltynaruto.procedures.NinjaGUILevelUpTaijutsuProcedure;
+import net.mcreator.saltynaruto.procedures.NinjaGUILevelUpSummoningProcedure;
+import net.mcreator.saltynaruto.procedures.NinjaGUILevelUpSenjutsuProcedure;
 import net.mcreator.saltynaruto.procedures.NinjaGUILevelUpNinjutsuProcedure;
+import net.mcreator.saltynaruto.procedures.NinjaGUILevelUpIreninjutsuProcedure;
 import net.mcreator.saltynaruto.procedures.NinjaGUILevelUpGenjutsuProcedure;
 import net.mcreator.saltynaruto.SaltyNarutoMod;
 
@@ -75,6 +78,18 @@ public class NinjaGUIButtonMessage {
 		if (buttonID == 2) {
 
 			NinjaGUILevelUpGenjutsuProcedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			NinjaGUILevelUpSummoningProcedure.execute(entity);
+		}
+		if (buttonID == 4) {
+
+			NinjaGUILevelUpSenjutsuProcedure.execute(entity);
+		}
+		if (buttonID == 5) {
+
+			NinjaGUILevelUpIreninjutsuProcedure.execute(entity);
 		}
 	}
 

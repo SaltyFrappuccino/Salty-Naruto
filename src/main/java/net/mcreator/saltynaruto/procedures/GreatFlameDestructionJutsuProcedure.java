@@ -11,6 +11,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.Registries;
@@ -33,11 +35,12 @@ public class GreatFlameDestructionJutsuProcedure {
 					entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(),
 					entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos().getY(),
 					entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()))
-					.canOcclude() || raytrace_distance < 20) {
+					.canOcclude() || raytrace_distance < 30) {
 				raytrace_distance = raytrace_distance + 2;
-				for (int index1 = 0; index1 < 5; index1++) {
-					world.addParticle(ParticleTypes.FLAME, (x + Math.random() * 2), (y + Math.random() * 2), (z + Math.random() * 2), ((Math.sin(Math.toRadians(entity.getYRot() + 180)) * raytrace_distance) / 2),
-							((Math.sin(Math.toRadians(0 - entity.getXRot())) * raytrace_distance) / 2), ((Math.cos(Math.toRadians(entity.getYRot())) * raytrace_distance) / 2));
+				for (int index1 = 0; index1 < 10; index1++) {
+					world.addParticle(ParticleTypes.FLAME, (x + Math.random() * 0.75 * Mth.nextInt(RandomSource.create(), -1, 1)), (y + Math.random() * 1 + 1.45), (z + Math.random() * 0.75 * Mth.nextInt(RandomSource.create(), -1, 1)),
+							((Math.sin(Math.toRadians(entity.getYRot() + 180)) * raytrace_distance) / 2), ((Math.sin(Math.toRadians(0 - entity.getXRot())) * raytrace_distance) / 2),
+							((Math.cos(Math.toRadians(entity.getYRot())) * raytrace_distance) / 2));
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
@@ -69,7 +72,7 @@ public class GreatFlameDestructionJutsuProcedure {
 									.getY()),
 							(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos()
 									.getZ()));
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity) && entityiterator instanceof LivingEntity && !((entity.getVehicle()) == entityiterator) && !((entityiterator.getVehicle()) == entity)) {
 							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), (float) (entity.getPersistentData().getDouble("sn_Charge_2")

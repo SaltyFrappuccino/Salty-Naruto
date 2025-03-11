@@ -14,7 +14,7 @@
     "damage": 1.0,
     "knockback": 1,
     "entityModel": "ModelFireball",
-    "customModelTexture": "texture.png",
+    "customModelTexture": "fireballtexture.png",
     "modelWidth": 3.0,
     "modelHeight": 3.0,
     "onHitsBlock": {

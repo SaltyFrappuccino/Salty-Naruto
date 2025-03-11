@@ -3,14 +3,18 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "minecraft:written_book",
+    "texture": "minecraft:skull_banner_pattern",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Fire Release: Great Fireball Jutsu Learner",
+    "name": "Clan Reroller",
     "rarity": "COMMON",
-    "creativeTabs": [],
-    "stackSize": 1,
+    "creativeTabs": [
+      {
+        "value": "TOOLS"
+      }
+    ],
+    "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
@@ -25,10 +29,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [
-        "C-Rank Fire Jutsu",
-        "Cost 5 JP"
-      ]
+      "fixedValue": []
     },
     "glowCondition": {
       "fixedValue": false
@@ -36,7 +37,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "LearnFireReleaseFireballJutsu"
+      "name": "ClanRerollerRMB"
     },
     "enableRanged": false,
     "shootConstantly": false,

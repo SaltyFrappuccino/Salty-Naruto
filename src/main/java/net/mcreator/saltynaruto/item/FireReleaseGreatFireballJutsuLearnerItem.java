@@ -24,6 +24,7 @@ public class FireReleaseGreatFireballJutsuLearnerItem extends Item {
 	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, level, list, flag);
 		list.add(Component.translatable("item.salty_naruto.fire_release_great_fireball_jutsu_learner.description_0"));
+		list.add(Component.translatable("item.salty_naruto.fire_release_great_fireball_jutsu_learner.description_1"));
 	}
 
 	@Override

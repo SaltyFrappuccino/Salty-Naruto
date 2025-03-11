@@ -23,6 +23,8 @@ public class SaltyNarutoModTabs {
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 			tabData.accept(SaltyNarutoModItems.FIRE_RELEASE.get());
+		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+			tabData.accept(SaltyNarutoModItems.CLAN_REROLLER.get());
 		}
 	}
 }

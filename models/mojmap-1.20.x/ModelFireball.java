@@ -17,21 +17,19 @@ public class ModelFireball<T extends Entity> extends EntityModel<T> {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
-		PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create().texOffs(0, 0)
-				.addBox(-1.0F, -2.0F, -1.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)),
+		PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main", CubeListBuilder.create().texOffs(-4, 2)
+				.addBox(-2.0F, -4.0F, -2.0F, 4.0F, 4.0F, 4.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(0.0F, 24.0F, 0.0F));
 
-		PartDefinition cube_r1 = bb_main
-				.addOrReplaceChild("cube_r1",
-						CubeListBuilder.create().texOffs(0, 8).addBox(-1.0F, -2.0F, -1.0F, 2.0F, 2.0F, 2.0F,
-								new CubeDeformation(0.0F)),
-						PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.2618F));
+		PartDefinition cube_r1 = bb_main.addOrReplaceChild("cube_r1",
+				CubeListBuilder.create().texOffs(-4, 2).addBox(-5.0F, -3.0F, 1.0F, 4.0F, 4.0F, 4.0F,
+						new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(4.25F, -2.75F, 0.75F, 1.0911F, -0.4956F, -0.9981F));
 
-		PartDefinition cube_r2 = bb_main
-				.addOrReplaceChild("cube_r2",
-						CubeListBuilder.create().texOffs(0, 4).addBox(-1.0F, -2.0F, -1.0F, 2.0F, 2.0F, 2.0F,
-								new CubeDeformation(0.0F)),
-						PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.3927F, 0.0F, 0.0F));
+		PartDefinition cube_r2 = bb_main.addOrReplaceChild("cube_r2",
+				CubeListBuilder.create().texOffs(-4, 2).addBox(-5.0F, -3.0F, 1.0F, 4.0F, 4.0F, 4.0F,
+						new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(4.0F, -1.0F, 1.0F, 0.0F, -1.0472F, 0.0F));
 
 		return LayerDefinition.create(meshdefinition, 16, 16);
 	}

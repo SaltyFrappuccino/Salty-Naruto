@@ -11,12 +11,15 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.saltynaruto.world.inventory.NinjaGUIMenu;
 import net.mcreator.saltynaruto.procedures.ReturnTaijutsuLevelProcedure;
+import net.mcreator.saltynaruto.procedures.ReturnSummoningLevelProcedure;
+import net.mcreator.saltynaruto.procedures.ReturnSenjutsuLevelProcedure;
 import net.mcreator.saltynaruto.procedures.ReturnPlayerLevelProcedure;
 import net.mcreator.saltynaruto.procedures.ReturnPlayerExperienceProcedure;
 import net.mcreator.saltynaruto.procedures.ReturnPlayerClanProcedure;
 import net.mcreator.saltynaruto.procedures.ReturnNinjutusLevelProcedure;
 import net.mcreator.saltynaruto.procedures.ReturnLevelPointsProcedure;
 import net.mcreator.saltynaruto.procedures.ReturnJutsuPointsProcedure;
+import net.mcreator.saltynaruto.procedures.ReturnIreninjutsuLevelProcedure;
 import net.mcreator.saltynaruto.procedures.ReturnGenjutsuLevelProcedure;
 import net.mcreator.saltynaruto.network.NinjaGUIButtonMessage;
 import net.mcreator.saltynaruto.SaltyNarutoMod;
@@ -33,6 +36,9 @@ public class NinjaGUIScreen extends AbstractContainerScreen<NinjaGUIMenu> {
 	Button button_empty;
 	Button button_empty1;
 	Button button_empty2;
+	Button button_empty3;
+	Button button_empty4;
+	Button button_empty5;
 
 	public NinjaGUIScreen(NinjaGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -41,7 +47,7 @@ public class NinjaGUIScreen extends AbstractContainerScreen<NinjaGUIMenu> {
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 250;
+		this.imageWidth = 300;
 		this.imageHeight = 166;
 	}
 
@@ -76,28 +82,37 @@ public class NinjaGUIScreen extends AbstractContainerScreen<NinjaGUIMenu> {
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font,
 
-				ReturnPlayerLevelProcedure.execute(entity), 6, 7, -12829636, false);
+				ReturnPlayerLevelProcedure.execute(entity), 14, 7, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				ReturnPlayerExperienceProcedure.execute(entity), 5, 20, -12829636, false);
+				ReturnPlayerExperienceProcedure.execute(entity), 14, 16, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				ReturnLevelPointsProcedure.execute(entity), 5, 36, -12829636, false);
+				ReturnLevelPointsProcedure.execute(entity), 14, 34, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				ReturnJutsuPointsProcedure.execute(entity), 5, 49, -12829636, false);
+				ReturnJutsuPointsProcedure.execute(entity), 14, 43, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				ReturnNinjutusLevelProcedure.execute(entity), 5, 66, -12829636, false);
+				ReturnNinjutusLevelProcedure.execute(entity), 14, 61, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				ReturnTaijutsuLevelProcedure.execute(entity), 5, 91, -12829636, false);
+				ReturnTaijutsuLevelProcedure.execute(entity), 14, 88, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				ReturnGenjutsuLevelProcedure.execute(entity), 5, 117, -12829636, false);
+				ReturnGenjutsuLevelProcedure.execute(entity), 14, 115, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				ReturnPlayerClanProcedure.execute(entity), 5, 138, -12829636, false);
+				ReturnPlayerClanProcedure.execute(entity), 14, 142, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				ReturnSenjutsuLevelProcedure.execute(entity), 149, 61, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				ReturnSummoningLevelProcedure.execute(entity), 149, 88, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				ReturnIreninjutsuLevelProcedure.execute(entity), 149, 115, -12829636, false);
 	}
 
 	@Override
@@ -108,7 +123,7 @@ public class NinjaGUIScreen extends AbstractContainerScreen<NinjaGUIMenu> {
 				SaltyNarutoMod.PACKET_HANDLER.sendToServer(new NinjaGUIButtonMessage(0, x, y, z));
 				NinjaGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 113, this.topPos + 61, 30, 20).build();
+		}).bounds(this.leftPos + 113, this.topPos + 57, 30, 20).build();
 		guistate.put("button:button_empty", button_empty);
 		this.addRenderableWidget(button_empty);
 		button_empty1 = Button.builder(Component.translatable("gui.salty_naruto.ninja_gui.button_empty1"), e -> {
@@ -116,7 +131,7 @@ public class NinjaGUIScreen extends AbstractContainerScreen<NinjaGUIMenu> {
 				SaltyNarutoMod.PACKET_HANDLER.sendToServer(new NinjaGUIButtonMessage(1, x, y, z));
 				NinjaGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}).bounds(this.leftPos + 113, this.topPos + 86, 30, 20).build();
+		}).bounds(this.leftPos + 113, this.topPos + 85, 30, 20).build();
 		guistate.put("button:button_empty1", button_empty1);
 		this.addRenderableWidget(button_empty1);
 		button_empty2 = Button.builder(Component.translatable("gui.salty_naruto.ninja_gui.button_empty2"), e -> {
@@ -127,5 +142,29 @@ public class NinjaGUIScreen extends AbstractContainerScreen<NinjaGUIMenu> {
 		}).bounds(this.leftPos + 113, this.topPos + 112, 30, 20).build();
 		guistate.put("button:button_empty2", button_empty2);
 		this.addRenderableWidget(button_empty2);
+		button_empty3 = Button.builder(Component.translatable("gui.salty_naruto.ninja_gui.button_empty3"), e -> {
+			if (true) {
+				SaltyNarutoMod.PACKET_HANDLER.sendToServer(new NinjaGUIButtonMessage(3, x, y, z));
+				NinjaGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}).bounds(this.leftPos + 257, this.topPos + 85, 30, 20).build();
+		guistate.put("button:button_empty3", button_empty3);
+		this.addRenderableWidget(button_empty3);
+		button_empty4 = Button.builder(Component.translatable("gui.salty_naruto.ninja_gui.button_empty4"), e -> {
+			if (true) {
+				SaltyNarutoMod.PACKET_HANDLER.sendToServer(new NinjaGUIButtonMessage(4, x, y, z));
+				NinjaGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		}).bounds(this.leftPos + 257, this.topPos + 57, 30, 20).build();
+		guistate.put("button:button_empty4", button_empty4);
+		this.addRenderableWidget(button_empty4);
+		button_empty5 = Button.builder(Component.translatable("gui.salty_naruto.ninja_gui.button_empty5"), e -> {
+			if (true) {
+				SaltyNarutoMod.PACKET_HANDLER.sendToServer(new NinjaGUIButtonMessage(5, x, y, z));
+				NinjaGUIButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
+		}).bounds(this.leftPos + 257, this.topPos + 112, 30, 20).build();
+		guistate.put("button:button_empty5", button_empty5);
+		this.addRenderableWidget(button_empty5);
 	}
 }

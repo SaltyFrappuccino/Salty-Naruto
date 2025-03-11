@@ -4,10 +4,10 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.saltynaruto.network.SaltyNarutoModVariables;
 
-public class ReturnChakraPoolNinjaMenuProcedure {
+public class ReturnSenjutsuLevelProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "" + (entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).ChakraPool;
+		return "Senjutsu Level: " + Math.round((entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).SenjutsuLevel);
 	}
 }

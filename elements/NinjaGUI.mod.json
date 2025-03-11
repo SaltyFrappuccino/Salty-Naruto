@@ -3,7 +3,7 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 250,
+    "width": 300,
     "height": 166,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
@@ -22,7 +22,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 95,
+          "x": 78,
           "y": 44,
           "locked": false
         }
@@ -39,8 +39,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 94,
-          "y": 57,
+          "x": 78,
+          "y": 53,
           "locked": false
         }
       },
@@ -56,8 +56,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 94,
-          "y": 73,
+          "x": 78,
+          "y": 71,
           "locked": false
         }
       },
@@ -73,8 +73,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 94,
-          "y": 86,
+          "x": 78,
+          "y": 80,
           "locked": false
         }
       },
@@ -90,8 +90,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 94,
-          "y": 103,
+          "x": 78,
+          "y": 98,
           "locked": false
         }
       },
@@ -107,8 +107,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 94,
-          "y": 128,
+          "x": 78,
+          "y": 125,
           "locked": false
         }
       },
@@ -124,8 +124,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 94,
-          "y": 154,
+          "x": 78,
+          "y": 152,
           "locked": false
         }
       },
@@ -140,8 +140,8 @@
           },
           "width": 30,
           "height": 20,
-          "x": 202,
-          "y": 98,
+          "x": 177,
+          "y": 94,
           "locked": false
         }
       },
@@ -156,8 +156,8 @@
           },
           "width": 30,
           "height": 20,
-          "x": 202,
-          "y": 123,
+          "x": 177,
+          "y": 122,
           "locked": false
         }
       },
@@ -172,7 +172,7 @@
           },
           "width": 30,
           "height": 20,
-          "x": 202,
+          "x": 177,
           "y": 149,
           "locked": false
         }
@@ -189,8 +189,107 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 94,
-          "y": 175,
+          "x": 78,
+          "y": 179,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_senjutsu_level",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnSenjutsuLevel"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 213,
+          "y": 98,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_summoning_level",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnSummoningLevel"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 213,
+          "y": 125,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_ireninjutsu_level",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnIreninjutsuLevel"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 213,
+          "y": 152,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty3",
+          "text": "+",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "NinjaGUILevelUpSummoning"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 321,
+          "y": 122,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty4",
+          "text": "+",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "NinjaGUILevelUpSenjutsu"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 321,
+          "y": 94,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty5",
+          "text": "+",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "NinjaGUILevelUpIreninjutsu"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 321,
+          "y": 149,
           "locked": false
         }
       }

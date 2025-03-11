@@ -26,7 +26,8 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "B-Rank Fire Jutsu"
+        "B-Rank Fire Jutsu",
+        "Cost 10 JP"
       ]
     },
     "glowCondition": {
