@@ -8,6 +8,6 @@ public class ReturnSummoningLevelProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "Summon Level: " + Math.round((entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).SummoningLevel);
+		return "" + Math.round((entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).SummoningLevel);
 	}
 }

@@ -40,6 +40,12 @@ public class FireReleaseRenderTooltipProcedure {
 			if ((entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).FireRelease_GreatFireDestruction == true) {
 				tooltip.add(Component.literal("Great Fire Destruction"));
 			}
+			if ((entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).FireRelease_HidingInAshAndDust == true) {
+				tooltip.add(Component.literal("Hiding in Ash and Dust"));
+			}
+			if ((entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).FireRelease_GreatFireAnnihilation == true) {
+				tooltip.add(Component.literal("Great Fire Annihilation"));
+			}
 		}
 	}
 }

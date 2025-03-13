@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "zombie",
+    "endermite",
+    "silverfish",
+    "husk",
+    "shulker",
+    "zombie_villager",
+    "drowned",
+    "spider",
+    "cave_spider"
+  ]
+}

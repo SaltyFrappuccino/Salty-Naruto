@@ -8,6 +8,6 @@ public class ReturnIreninjutsuLevelProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "Ireninjutsu Level: " + Math.round((entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).IreninjutsuLevel);
+		return "" + Math.round((entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).IreninjutsuLevel);
 	}
 }

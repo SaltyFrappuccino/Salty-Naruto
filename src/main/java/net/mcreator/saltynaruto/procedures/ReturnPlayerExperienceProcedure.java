@@ -8,6 +8,7 @@ public class ReturnPlayerExperienceProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "Player Experience: " + Math.round((entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).PlayerExperience);
+		return "" + Math.round((entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).PlayerExperience) + " | "
+				+ Math.round((entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).PlayerLevel * 5);
 	}
 }

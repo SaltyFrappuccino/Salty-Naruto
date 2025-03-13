@@ -3,7 +3,7 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 300,
+    "width": 313,
     "height": 166,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
@@ -22,7 +22,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 78,
+          "x": 60,
           "y": 44,
           "locked": false
         }
@@ -39,7 +39,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 78,
+          "x": 60,
           "y": 53,
           "locked": false
         }
@@ -56,7 +56,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 78,
+          "x": 60,
           "y": 71,
           "locked": false
         }
@@ -73,7 +73,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 78,
+          "x": 60,
           "y": 80,
           "locked": false
         }
@@ -90,7 +90,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 78,
+          "x": 60,
           "y": 98,
           "locked": false
         }
@@ -107,7 +107,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 78,
+          "x": 60,
           "y": 125,
           "locked": false
         }
@@ -124,7 +124,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 78,
+          "x": 60,
           "y": 152,
           "locked": false
         }
@@ -140,8 +140,8 @@
           },
           "width": 30,
           "height": 20,
-          "x": 177,
-          "y": 94,
+          "x": 159,
+          "y": 98,
           "locked": false
         }
       },
@@ -156,8 +156,8 @@
           },
           "width": 30,
           "height": 20,
-          "x": 177,
-          "y": 122,
+          "x": 159,
+          "y": 125,
           "locked": false
         }
       },
@@ -172,8 +172,8 @@
           },
           "width": 30,
           "height": 20,
-          "x": 177,
-          "y": 149,
+          "x": 159,
+          "y": 152,
           "locked": false
         }
       },
@@ -189,8 +189,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 78,
-          "y": 179,
+          "x": 60,
+          "y": 188,
           "locked": false
         }
       },
@@ -206,7 +206,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 213,
+          "x": 195,
           "y": 98,
           "locked": false
         }
@@ -223,7 +223,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 213,
+          "x": 195,
           "y": 125,
           "locked": false
         }
@@ -240,7 +240,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 213,
+          "x": 195,
           "y": 152,
           "locked": false
         }
@@ -292,6 +292,122 @@
           "y": 149,
           "locked": false
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_chakra_max_capacity",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnChakraMaxCapacity"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 186,
+          "y": 44,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_player_strength",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPlayerStrength"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 186,
+          "y": 62,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_player_durabilities",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPlayerDurabilities"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 186,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty6",
+          "text": "+",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "NinjaGUILevelUpChakraMaxCapacity"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 312,
+          "y": 44,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty7",
+          "text": "+",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "NinjaGUILevelUpPlayerStrength"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 312,
+          "y": 62,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty8",
+          "text": "+",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "NinjaGUILevelUpPlayerDurability"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 312,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_player_intelligence",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPlayerIntelligence"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 186,
+          "y": 188,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {
@@ -299,7 +415,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

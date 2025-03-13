@@ -8,6 +8,6 @@ public class ReturnPlayerClanProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "Clan: " + (entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).Clan;
+		return "" + (entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).Clan;
 	}
 }

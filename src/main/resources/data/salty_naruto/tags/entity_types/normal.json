@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "blaze",
+    "creeper",
+    "guardian",
+    "ghast",
+    "wither_skeleton",
+    "skeleton",
+    "enderman"
+  ]
+}

@@ -8,6 +8,6 @@ public class ReturnLevelPointsProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "LP: " + Math.round((entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).LP);
+		return "" + Math.round((entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).LP);
 	}
 }

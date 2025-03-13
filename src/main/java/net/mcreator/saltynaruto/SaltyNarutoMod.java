@@ -18,6 +18,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.saltynaruto.init.SaltyNarutoModTabs;
+import net.mcreator.saltynaruto.init.SaltyNarutoModParticleTypes;
 import net.mcreator.saltynaruto.init.SaltyNarutoModMenus;
 import net.mcreator.saltynaruto.init.SaltyNarutoModItems;
 import net.mcreator.saltynaruto.init.SaltyNarutoModEntities;
@@ -46,6 +47,8 @@ public class SaltyNarutoMod {
 		SaltyNarutoModEntities.REGISTRY.register(bus);
 
 		SaltyNarutoModTabs.REGISTRY.register(bus);
+
+		SaltyNarutoModParticleTypes.REGISTRY.register(bus);
 
 		SaltyNarutoModMenus.REGISTRY.register(bus);
 

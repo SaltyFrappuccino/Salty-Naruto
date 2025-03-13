@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "elder_guardian",
+    "evoker",
+    "ravager",
+    "iron_golem"
+  ]
+}

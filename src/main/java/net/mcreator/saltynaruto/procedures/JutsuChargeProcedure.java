@@ -57,6 +57,48 @@ public class JutsuChargeProcedure {
 				}
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("sn_currentJutsu") == 2) {
 					maxCharge = 5;
+					chargeCost = 1500;
+					if (entity.getPersistentData().getDouble("sn_Charge_2") <= maxCharge) {
+						entity.getPersistentData().putDouble("sn_Charge_1", (entity.getPersistentData().getDouble("sn_Charge_1") + 1));
+						if (entity instanceof Player _player && !_player.level().isClientSide())
+							_player.displayClientMessage(Component.literal(("Charge: " + Math.round(entity.getPersistentData().getDouble("sn_Charge_2")))), true);
+						if (entity.getPersistentData().getDouble("sn_Charge_1") == 10
+								&& (entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).ChakraPool >= chargeCost) {
+							entity.getPersistentData().putDouble("sn_Charge_1", 0);
+							entity.getPersistentData().putDouble("sn_Charge_2", (entity.getPersistentData().getDouble("sn_Charge_2") + 1));
+							{
+								double _setval = (entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).ChakraPool - chargeCost;
+								entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.ChakraPool = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
+						}
+					}
+				}
+				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("sn_currentJutsu") == 3) {
+					maxCharge = 15;
+					chargeCost = 250;
+					if (entity.getPersistentData().getDouble("sn_Charge_2") <= maxCharge) {
+						entity.getPersistentData().putDouble("sn_Charge_1", (entity.getPersistentData().getDouble("sn_Charge_1") + 1));
+						if (entity instanceof Player _player && !_player.level().isClientSide())
+							_player.displayClientMessage(Component.literal(("Charge: " + Math.round(entity.getPersistentData().getDouble("sn_Charge_2")))), true);
+						if (entity.getPersistentData().getDouble("sn_Charge_1") == 10
+								&& (entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).ChakraPool >= chargeCost) {
+							entity.getPersistentData().putDouble("sn_Charge_1", 0);
+							entity.getPersistentData().putDouble("sn_Charge_2", (entity.getPersistentData().getDouble("sn_Charge_2") + 1));
+							{
+								double _setval = (entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SaltyNarutoModVariables.PlayerVariables())).ChakraPool - chargeCost;
+								entity.getCapability(SaltyNarutoModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.ChakraPool = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
+						}
+					}
+				}
+				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("sn_currentJutsu") == 4) {
+					maxCharge = 5;
 					chargeCost = 2500;
 					if (entity.getPersistentData().getDouble("sn_Charge_2") <= maxCharge) {
 						entity.getPersistentData().putDouble("sn_Charge_1", (entity.getPersistentData().getDouble("sn_Charge_1") + 1));

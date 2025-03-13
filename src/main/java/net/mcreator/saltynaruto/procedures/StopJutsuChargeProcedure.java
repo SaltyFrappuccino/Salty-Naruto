@@ -21,6 +21,12 @@ public class StopJutsuChargeProcedure {
 				GreatFlameDestructionJutsuFlowProcedure.execute(world, x, y, z, entity);
 				entity.getPersistentData().putBoolean("sn_isCharging", false);
 				entity.getPersistentData().putBoolean("sn_GreatFireDestruction", true);
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("sn_currentJutsu") == 3) {
+				HidingInAshAndDustJutsuProcedure.execute(world, x, y, z, entity);
+				entity.getPersistentData().putBoolean("sn_isCharging", false);
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("sn_currentJutsu") == 4) {
+				GreatFireAnnihilationJutsuProcedure.execute(world, x, y, z, entity);
+				entity.getPersistentData().putBoolean("sn_isCharging", false);
 			}
 		}
 	}

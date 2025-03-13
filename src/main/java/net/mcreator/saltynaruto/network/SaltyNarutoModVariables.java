@@ -94,6 +94,27 @@ public class SaltyNarutoModVariables {
 			clone.FireRelease_FireballJutsu = original.FireRelease_FireballJutsu;
 			clone.Clan = original.Clan;
 			clone.FireRelease_GreatFireDestruction = original.FireRelease_GreatFireDestruction;
+			clone.FireRelease = original.FireRelease;
+			clone.LightningRelease = original.LightningRelease;
+			clone.WaterRelease = original.WaterRelease;
+			clone.EarthRelease = original.EarthRelease;
+			clone.WindRelease = original.WindRelease;
+			clone.BoilRelease = original.BoilRelease;
+			clone.ExplosionRelease = original.ExplosionRelease;
+			clone.IceRelease = original.IceRelease;
+			clone.LavaRelease = original.LavaRelease;
+			clone.MagnetRelease = original.MagnetRelease;
+			clone.ScorchRelease = original.ScorchRelease;
+			clone.StormRelease = original.StormRelease;
+			clone.DustRelease = original.DustRelease;
+			clone.WoodRelease = original.WoodRelease;
+			clone.SharinganRelease = original.SharinganRelease;
+			clone.ByakuganRelease = original.ByakuganRelease;
+			clone.RinneganRelease = original.RinneganRelease;
+			clone.YinRelease = original.YinRelease;
+			clone.YangRelease = original.YangRelease;
+			clone.FireRelease_HidingInAshAndDust = original.FireRelease_HidingInAshAndDust;
+			clone.FireRelease_GreatFireAnnihilation = original.FireRelease_GreatFireAnnihilation;
 			if (!event.isWasDeath()) {
 				clone.sharingan = original.sharingan;
 			}
@@ -138,8 +159,8 @@ public class SaltyNarutoModVariables {
 	public static class PlayerVariables {
 		public double ChakraPool = 0;
 		public double MaxChakra = 0;
-		public double PlayerLevel = 0;
-		public double PlayerExperience = 0;
+		public double PlayerLevel = 1.0;
+		public double PlayerExperience = 0.0;
 		public double JP = 0;
 		public double LP = 0;
 		public double Ninjutsu = 0;
@@ -155,6 +176,27 @@ public class SaltyNarutoModVariables {
 		public boolean sharingan = false;
 		public String Clan = "\"\"";
 		public boolean FireRelease_GreatFireDestruction = false;
+		public boolean FireRelease = false;
+		public boolean LightningRelease = false;
+		public boolean WaterRelease = false;
+		public boolean EarthRelease = false;
+		public boolean WindRelease = false;
+		public boolean BoilRelease = false;
+		public boolean ExplosionRelease = false;
+		public boolean IceRelease = false;
+		public boolean LavaRelease = false;
+		public boolean MagnetRelease = false;
+		public boolean ScorchRelease = false;
+		public boolean StormRelease = false;
+		public boolean DustRelease = false;
+		public boolean WoodRelease = false;
+		public boolean SharinganRelease = false;
+		public boolean ByakuganRelease = false;
+		public boolean RinneganRelease = false;
+		public boolean YinRelease = false;
+		public boolean YangRelease = false;
+		public boolean FireRelease_HidingInAshAndDust = false;
+		public boolean FireRelease_GreatFireAnnihilation = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -182,6 +224,27 @@ public class SaltyNarutoModVariables {
 			nbt.putBoolean("sharingan", sharingan);
 			nbt.putString("Clan", Clan);
 			nbt.putBoolean("FireRelease_GreatFireDestruction", FireRelease_GreatFireDestruction);
+			nbt.putBoolean("FireRelease", FireRelease);
+			nbt.putBoolean("LightningRelease", LightningRelease);
+			nbt.putBoolean("WaterRelease", WaterRelease);
+			nbt.putBoolean("EarthRelease", EarthRelease);
+			nbt.putBoolean("WindRelease", WindRelease);
+			nbt.putBoolean("BoilRelease", BoilRelease);
+			nbt.putBoolean("ExplosionRelease", ExplosionRelease);
+			nbt.putBoolean("IceRelease", IceRelease);
+			nbt.putBoolean("LavaRelease", LavaRelease);
+			nbt.putBoolean("MagnetRelease", MagnetRelease);
+			nbt.putBoolean("ScorchRelease", ScorchRelease);
+			nbt.putBoolean("StormRelease", StormRelease);
+			nbt.putBoolean("DustRelease", DustRelease);
+			nbt.putBoolean("WoodRelease", WoodRelease);
+			nbt.putBoolean("SharinganRelease", SharinganRelease);
+			nbt.putBoolean("ByakuganRelease", ByakuganRelease);
+			nbt.putBoolean("RinneganRelease", RinneganRelease);
+			nbt.putBoolean("YinRelease", YinRelease);
+			nbt.putBoolean("YangRelease", YangRelease);
+			nbt.putBoolean("FireRelease_HidingInAshAndDust", FireRelease_HidingInAshAndDust);
+			nbt.putBoolean("FireRelease_GreatFireAnnihilation", FireRelease_GreatFireAnnihilation);
 			return nbt;
 		}
 
@@ -212,6 +275,27 @@ public class SaltyNarutoModVariables {
 			sharingan = nbt.getBoolean("sharingan");
 			Clan = nbt.getString("Clan");
 			FireRelease_GreatFireDestruction = nbt.getBoolean("FireRelease_GreatFireDestruction");
+			FireRelease = nbt.getBoolean("FireRelease");
+			LightningRelease = nbt.getBoolean("LightningRelease");
+			WaterRelease = nbt.getBoolean("WaterRelease");
+			EarthRelease = nbt.getBoolean("EarthRelease");
+			WindRelease = nbt.getBoolean("WindRelease");
+			BoilRelease = nbt.getBoolean("BoilRelease");
+			ExplosionRelease = nbt.getBoolean("ExplosionRelease");
+			IceRelease = nbt.getBoolean("IceRelease");
+			LavaRelease = nbt.getBoolean("LavaRelease");
+			MagnetRelease = nbt.getBoolean("MagnetRelease");
+			ScorchRelease = nbt.getBoolean("ScorchRelease");
+			StormRelease = nbt.getBoolean("StormRelease");
+			DustRelease = nbt.getBoolean("DustRelease");
+			WoodRelease = nbt.getBoolean("WoodRelease");
+			SharinganRelease = nbt.getBoolean("SharinganRelease");
+			ByakuganRelease = nbt.getBoolean("ByakuganRelease");
+			RinneganRelease = nbt.getBoolean("RinneganRelease");
+			YinRelease = nbt.getBoolean("YinRelease");
+			YangRelease = nbt.getBoolean("YangRelease");
+			FireRelease_HidingInAshAndDust = nbt.getBoolean("FireRelease_HidingInAshAndDust");
+			FireRelease_GreatFireAnnihilation = nbt.getBoolean("FireRelease_GreatFireAnnihilation");
 		}
 	}
 
@@ -264,6 +348,27 @@ public class SaltyNarutoModVariables {
 					variables.sharingan = message.data.sharingan;
 					variables.Clan = message.data.Clan;
 					variables.FireRelease_GreatFireDestruction = message.data.FireRelease_GreatFireDestruction;
+					variables.FireRelease = message.data.FireRelease;
+					variables.LightningRelease = message.data.LightningRelease;
+					variables.WaterRelease = message.data.WaterRelease;
+					variables.EarthRelease = message.data.EarthRelease;
+					variables.WindRelease = message.data.WindRelease;
+					variables.BoilRelease = message.data.BoilRelease;
+					variables.ExplosionRelease = message.data.ExplosionRelease;
+					variables.IceRelease = message.data.IceRelease;
+					variables.LavaRelease = message.data.LavaRelease;
+					variables.MagnetRelease = message.data.MagnetRelease;
+					variables.ScorchRelease = message.data.ScorchRelease;
+					variables.StormRelease = message.data.StormRelease;
+					variables.DustRelease = message.data.DustRelease;
+					variables.WoodRelease = message.data.WoodRelease;
+					variables.SharinganRelease = message.data.SharinganRelease;
+					variables.ByakuganRelease = message.data.ByakuganRelease;
+					variables.RinneganRelease = message.data.RinneganRelease;
+					variables.YinRelease = message.data.YinRelease;
+					variables.YangRelease = message.data.YangRelease;
+					variables.FireRelease_HidingInAshAndDust = message.data.FireRelease_HidingInAshAndDust;
+					variables.FireRelease_GreatFireAnnihilation = message.data.FireRelease_GreatFireAnnihilation;
 				}
 			});
 			context.setPacketHandled(true);
